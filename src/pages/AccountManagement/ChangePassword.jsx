@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "sonner";
+import { changePasswordAPI } from "@/api/account";
 
 const schema = z.object({
   currentPassword: z.string().min(6, "Current password must be at least 6 characters."),

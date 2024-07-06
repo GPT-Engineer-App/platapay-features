@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "sonner";
+import { forgotPasswordAPI } from "@/api/account";
 
 const schema = z.object({
   email: z.string().email("Invalid email address"),
@@ -17,9 +18,7 @@ const ForgotPassword = () => {
 
   const onSubmit = async (data) => {
     try {
-      // Simulate API call for password reset
-      // Replace with actual API call
-      console.log("Sending password reset link to:", data.email);
+      await forgotPasswordAPI(data.email);
       toast.success("Password reset link sent to your email for InterPay Outlet Portal");
     } catch (error) {
       console.error("Error sending password reset link:", error);

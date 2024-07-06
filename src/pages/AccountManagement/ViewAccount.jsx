@@ -1,24 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-
-const fetchAccountDetails = async () => {
-  try {
-    const response = await fetch("/api/interpay/account-details");
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    return response.json();
-  } catch (error) {
-    console.error("Error fetching account details:", error);
-    throw error;
-  }
-};
+import { fetchAccountDetailsAPI } from "@/api/account";
 
 const ViewAccount = () => {
   const { data, error, isLoading } = useQuery({
     queryKey: ["accountDetails"],
-    queryFn: fetchAccountDetails,
+    queryFn: fetchAccountDetailsAPI,
   });
 
   if (isLoading) {
