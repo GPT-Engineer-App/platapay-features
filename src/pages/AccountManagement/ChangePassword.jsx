@@ -20,15 +20,21 @@ const ChangePassword = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    // Handle password change logic here
-    toast("Password changed successfully");
+  const onSubmit = async (data) => {
+    try {
+      // Handle password change logic specific to InterPay Outlet Portal
+      // Example: await changePasswordAPI(data);
+      toast("Password changed successfully for InterPay Outlet Portal");
+    } catch (error) {
+      console.error("Error changing password:", error);
+      toast.error("Failed to change password. Please try again.");
+    }
   };
 
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Change Password</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Change Password - InterPay Outlet Portal</h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-lg mx-auto space-y-4">
             <FormField
