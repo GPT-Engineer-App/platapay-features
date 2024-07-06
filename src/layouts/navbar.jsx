@@ -145,12 +145,3 @@ const NavItem = ({ to, children, className }) => (
 );
 
 export default Layout;
-
-const navItems = [
-  // existing nav items
-  {
-    title: "Feature Progress",
-    to: "/feature-progress",
-    icon: <CheckSquare className="h-4 w-4" />,
-  },
-];
