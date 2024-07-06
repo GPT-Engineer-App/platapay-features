@@ -60,13 +60,7 @@ const App = () => {
               <Route path="pricing" element={<Pricing />} />
               <Route path="contact" element={<Contact />} />
               <Route path="feature-progress" element={<FeatureProgress />} />
-              <Route path="account/change-password" element={<ChangePassword />} />
-              <Route path="account/forgot-password" element={<ForgotPassword />} />
-              <Route path="account/view-account" element={<ViewAccount />} />
-              <Route path="account/edit-profile" element={<EditProfile />} />
-              <Route path="customer-care/customer-management" element={<CustomerManagement />} />
-              <Route path="customer-care/online-ticketing" element={<OnlineTicketing />} />
-              <Route path="customer-care/partner-training" element={<PartnerTraining />} />
+              {/* other routes */}
             </Route>
           </Routes>
         </Router>
