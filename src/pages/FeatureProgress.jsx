@@ -51,7 +51,7 @@ const FeatureProgress = () => {
                 </li>
               ))}
             </ul>
-          </CardContent>
+          </Content>
         </Card>
       </div>
     </section>
