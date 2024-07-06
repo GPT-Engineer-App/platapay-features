@@ -22,21 +22,21 @@ const ChangePassword = () => {
 
   const onSubmit = async (data) => {
     try {
-      // Handle password change logic specific to InterPay Outlet Portal
+      // Handle password change logic specific to InterPay Operator Portal
       // Example: await changePasswordAPI(data);
-      toast("Password changed successfully for InterPay Outlet Portal");
+      toast("Password changed successfully for InterPay Operator Portal");
     } catch (error) {
-      console.error("Error changing password:", error);
-      toast.error("Failed to change password. Please try again.");
+      console.error("Error changing password for InterPay Operator Portal:", error);
+      toast.error("Failed to change password for InterPay Operator Portal. Please try again.");
     }
   };
 
   return (
-    <section className="py-12">
+    <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Change Password - InterPay Outlet Portal</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Change Password - InterPay Operator Portal</h2>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-lg mx-auto space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-lg mx-auto space-y-6 p-6 bg-white rounded shadow-md">
             <FormField
               control={form.control}
               name="currentPassword"

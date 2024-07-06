@@ -3,15 +3,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const fetchAccountDetails = async () => {
-  // Replace with actual API call for InterPay Outlet Portal
+  // Replace with actual API call for InterPay Operator Portal
   try {
-    const response = await fetch("/api/interpay/account-details");
+    const response = await fetch("/api/interpay/operator/account-details");
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
     return response.json();
   } catch (error) {
-    console.error("Error fetching account details:", error);
+    console.error("Error fetching account details for InterPay Operator Portal:", error);
     throw error;
   }
 };
@@ -27,13 +27,13 @@ const ViewAccount = () => {
   }
 
   if (error) {
-    return <div>Error loading account details. Please try again later.</div>;
+    return <div>Error loading account details. Please try again later or contact support.</div>;
   }
 
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Account Details - InterPay Outlet Portal</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Account Details - InterPay Operator Portal</h2>
         <Card>
           <CardHeader>
             <CardTitle>Account Information</CardTitle>
@@ -42,9 +42,9 @@ const ViewAccount = () => {
             <p><strong>Name:</strong> {data.name}</p>
             <p><strong>Email:</strong> {data.email}</p>
             <p><strong>Phone:</strong> {data.phone}</p>
-            {/* Add any additional fields specific to InterPay Outlet Portal */}
             <p><strong>Account ID:</strong> {data.accountId}</p>
-            <p><strong>Registration Date:</strong> {data.registrationDate}</p>
+            <p><strong>Registration Date:</strong> {new Date(data.registrationDate).toLocaleDateString()}</p>
+            <p><strong>Status:</strong> {data.status}</p>
           </CardContent>
         </Card>
       </div>

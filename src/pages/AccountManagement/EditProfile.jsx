@@ -20,21 +20,22 @@ const EditProfile = () => {
 
   const onSubmit = async (data) => {
     try {
-      // Handle profile update logic specific to InterPay Outlet Portal here
+      // Handle profile update logic specific to InterPay Operator Portal here
       // Example: await updateProfile(data);
-      toast("Profile updated successfully");
+      console.log("Profile data submitted:", data);
+      toast("Profile updated successfully for InterPay Operator Portal");
     } catch (error) {
       console.error("Profile update failed", error);
-      toast("Profile update failed. Please try again.");
+      toast("Profile update failed for InterPay Operator Portal. Please try again.");
     }
   };
 
   return (
-    <section className="py-12">
+    <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Edit Profile - InterPay Outlet Portal</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Edit Profile - InterPay Operator Portal</h2>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-lg mx-auto space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-lg mx-auto space-y-6 bg-white p-6 rounded-lg shadow-md">
             <FormField
               control={form.control}
               name="name"
