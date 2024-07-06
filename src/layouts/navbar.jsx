@@ -1,5 +1,4 @@
 import { navItems } from "../App";
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
