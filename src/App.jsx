@@ -15,6 +15,7 @@ import EditProfile from "./pages/AccountManagement/EditProfile.jsx";
 import CustomerManagement from "./pages/CustomerCare/CustomerManagement.jsx";
 import OnlineTicketing from "./pages/CustomerCare/OnlineTicketing.jsx";
 import PartnerTraining from "./pages/CustomerCare/PartnerTraining.jsx";
+import FeatureProgress from "./pages/FeatureProgress.jsx";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,7 @@ const App = () => {
               <Route path="customer-care/customer-management" element={<CustomerManagement />} />
               <Route path="customer-care/online-ticketing" element={<OnlineTicketing />} />
               <Route path="customer-care/partner-training" element={<PartnerTraining />} />
+              <Route path="feature-progress" element={<FeatureProgress />} />
             </Route>
           </Routes>
         </Router>
