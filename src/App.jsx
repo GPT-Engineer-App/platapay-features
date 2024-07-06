@@ -12,6 +12,9 @@ import ChangePassword from "./pages/AccountManagement/ChangePassword.jsx";
 import ForgotPassword from "./pages/AccountManagement/ForgotPassword.jsx";
 import ViewAccount from "./pages/AccountManagement/ViewAccount.jsx";
 import EditProfile from "./pages/AccountManagement/EditProfile.jsx";
+import CustomerManagement from "./pages/CustomerCare/CustomerManagement.jsx";
+import OnlineTicketing from "./pages/CustomerCare/OnlineTicketing.jsx";
+import PartnerTraining from "./pages/CustomerCare/PartnerTraining.jsx";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +57,9 @@ const App = () => {
               <Route path="account/forgot-password" element={<ForgotPassword />} />
               <Route path="account/view-account" element={<ViewAccount />} />
               <Route path="account/edit-profile" element={<EditProfile />} />
+              <Route path="customer-care/customer-management" element={<CustomerManagement />} />
+              <Route path="customer-care/online-ticketing" element={<OnlineTicketing />} />
+              <Route path="customer-care/partner-training" element={<PartnerTraining />} />
             </Route>
           </Routes>
         </Router>

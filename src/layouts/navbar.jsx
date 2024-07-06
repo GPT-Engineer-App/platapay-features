@@ -110,6 +110,19 @@ const UserMenu = () => (
       </DropdownMenuItem>
       <DropdownMenuSeparator />
       <DropdownMenuItem>Logout</DropdownMenuItem>
+      <DropdownMenuSeparator />
+      <DropdownMenuItem>
+        <User className="h-4 w-4" />
+        Customer Management
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Mail className="h-4 w-4" />
+        Online Ticketing
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Edit className="h-4 w-4" />
+        Partner Training
+      </DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
 );

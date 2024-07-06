@@ -42,12 +42,18 @@ const Sidebar = () => (
       </div>
       <div className="flex-1">
         <nav className="grid items-start px-2 text-sm font-medium lg:px-4 gap-2">
-          {navItems.map((item) => (
-            <SidebarNavLink key={item.to} to={item.to}>
-              {item.icon}
-              {item.title}
-            </SidebarNavLink>
-          ))}
+          <SidebarNavLink to="/customer-care/customer-management">
+            <User className="h-4 w-4" />
+            Customer Management
+          </SidebarNavLink>
+          <SidebarNavLink to="/customer-care/online-ticketing">
+            <Mail className="h-4 w-4" />
+            Online Ticketing
+          </SidebarNavLink>
+          <SidebarNavLink to="/customer-care/partner-training">
+            <Edit className="h-4 w-4" />
+            Partner Training
+          </SidebarNavLink>
         </nav>
       </div>
     </div>
@@ -71,11 +77,15 @@ const MobileSidebar = () => (
           <Package2 className="h-6 w-6" />
           <span className="sr-only">Acme Inc</span>
         </NavLink>
-        {navItems.map((item) => (
-          <SidebarNavLink key={item.to} to={item.to}>
-            {item.title}
-          </SidebarNavLink>
-        ))}
+        <SidebarNavLink to="/customer-care/customer-management">
+          Customer Management
+        </SidebarNavLink>
+        <SidebarNavLink to="/customer-care/online-ticketing">
+          Online Ticketing
+        </SidebarNavLink>
+        <SidebarNavLink to="/customer-care/partner-training">
+          Partner Training
+        </SidebarNavLink>
       </nav>
     </SheetContent>
   </Sheet>
