@@ -9,9 +9,16 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2, Key, Mail, User, Edit } from "lucide-react";
+import { CircleUser, Menu, Package2, Key, Mail, User, Edit, CheckSquare } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
-import { navItems } from "../App";
+const navItems = [
+  // existing nav items
+  {
+    title: "Feature Progress",
+    to: "/feature-progress",
+    icon: <CheckSquare className="h-4 w-4" />,
+  },
+];
 
 const Layout = () => {
   return (
