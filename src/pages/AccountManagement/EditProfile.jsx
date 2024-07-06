@@ -10,7 +10,7 @@ import { toast } from "sonner";
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Invalid email address"),
-  phone: z.string().min(10, "Phone number must be at least 10 digits."),
+  phone: z.string().regex(/^\d{10}$/, "Phone number must be exactly 10 digits."),
   address: z.string().min(5, "Address must be at least 5 characters."),
 });
 
@@ -21,21 +21,20 @@ const EditProfile = () => {
 
   const onSubmit = async (data) => {
     try {
-      // Handle profile update logic specific to InterPay Outlet Portal here
-      // Example: await updateProfile(data);
-      toast.success("Profile updated successfully");
+      await updateProfileAPI(data);
+      toast.success("Profile updated successfully!");
     } catch (error) {
       console.error("Profile update failed", error);
-      toast.error("Profile update failed. Please try again.");
+      toast.error("Profile update failed. Please try again later.");
     }
   };
 
   return (
-    <section className="py-12">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Edit Profile - InterPay Outlet Portal</h2>
+    <section className="py-12 bg-gray-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Edit Profile - InterPay Outlet Portal</h2>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-lg mx-auto space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-lg mx-auto space-y-4 bg-white p-6 rounded-lg shadow-md">
             <FormField
               control={form.control}
               name="name"
@@ -88,7 +87,7 @@ const EditProfile = () => {
                 </FormItem>
               )}
             />
-            <Button type="submit" variant="primary">
+            <Button type="submit" variant="primary" className="w-full">
               Update Profile
             </Button>
           </form>
