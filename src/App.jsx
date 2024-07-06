@@ -15,6 +15,10 @@ import EditProfile from "./pages/AccountManagement/EditProfile.jsx";
 import CustomerManagement from "./pages/CustomerCare/CustomerManagement.jsx";
 import OnlineTicketing from "./pages/CustomerCare/OnlineTicketing.jsx";
 import PartnerTraining from "./pages/CustomerCare/PartnerTraining.jsx";
+import CompanyRegistration from "./pages/PartnerManagement/CompanyRegistration.jsx";
+import BranchRegistration from "./pages/PartnerManagement/BranchRegistration.jsx";
+import TagBranches from "./pages/PartnerManagement/TagBranches.jsx";
+import AssignBranchManagers from "./pages/PartnerManagement/AssignBranchManagers.jsx";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +64,10 @@ const App = () => {
               <Route path="customer-care/customer-management" element={<CustomerManagement />} />
               <Route path="customer-care/online-ticketing" element={<OnlineTicketing />} />
               <Route path="customer-care/partner-training" element={<PartnerTraining />} />
+              <Route path="partner-management/company-registration" element={<CompanyRegistration />} />
+              <Route path="partner-management/branch-registration" element={<BranchRegistration />} />
+              <Route path="partner-management/tag-branches" element={<TagBranches />} />
+              <Route path="partner-management/assign-branch-managers" element={<AssignBranchManagers />} />
             </Route>
           </Routes>
         </Router>
