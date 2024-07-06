@@ -11,7 +11,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { CircleUser, Menu, Package2, Key, Mail, User, Edit } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
-import { navItems } from "../App";
+
 
 const Layout = () => {
   return (
@@ -39,13 +39,6 @@ const Layout = () => {
 
 const DesktopNav = () => (
   <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6 text-lg font-medium md:text-sm">
-    <NavItem
-      to="/"
-      className="flex items-center gap-2 text-lg font-semibold md:text-base"
-    >
-      <Package2 className="h-6 w-6" />
-      <span className="sr-only">PlataPay</span>
-    </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
         {item.title}
@@ -64,13 +57,6 @@ const MobileNav = () => (
     </SheetTrigger>
     <SheetContent side="left">
       <nav className="grid gap-6 text-lg font-medium">
-        <NavItem
-          to="/"
-          className="flex items-center gap-2 text-lg font-semibold"
-        >
-          <Package2 className="h-6 w-6" />
-          <span className="sr-only">PlataPay</span>
-        </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
             {item.title}
