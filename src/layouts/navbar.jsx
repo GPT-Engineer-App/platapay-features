@@ -8,6 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { CircleUser, Menu, Package2, Key, Mail, User, Edit } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
