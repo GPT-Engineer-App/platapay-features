@@ -9,9 +9,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2, Key, Mail, User, Edit } from "lucide-react";
-import { CheckSquare } from "lucide-react";
+import { CircleUser, Menu, Package2, Key, Mail, User, Edit, CheckSquare } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
+
 const navItems = [
   // existing nav items
   {
