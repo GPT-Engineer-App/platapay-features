@@ -12,6 +12,9 @@ import ChangePassword from "./pages/AccountManagement/ChangePassword.jsx";
 import ForgotPassword from "./pages/AccountManagement/ForgotPassword.jsx";
 import ViewAccount from "./pages/AccountManagement/ViewAccount.jsx";
 import EditProfile from "./pages/AccountManagement/EditProfile.jsx";
+import CustomerIdentification from "./pages/KYCAMLCompliance/CustomerIdentification.jsx";
+import DueDiligence from "./pages/KYCAMLCompliance/DueDiligence.jsx";
+import TransactionMonitoring from "./pages/KYCAMLCompliance/TransactionMonitoring.jsx";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +57,9 @@ const App = () => {
               <Route path="account/forgot-password" element={<ForgotPassword />} />
               <Route path="account/view-account" element={<ViewAccount />} />
               <Route path="account/edit-profile" element={<EditProfile />} />
+              <Route path="kyc-aml/customer-identification" element={<CustomerIdentification />} />
+              <Route path="kyc-aml/due-diligence" element={<DueDiligence />} />
+              <Route path="kyc-aml/transaction-monitoring" element={<TransactionMonitoring />} />
             </Route>
           </Routes>
         </Router>

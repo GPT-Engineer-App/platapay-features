@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2, Key, Mail, User, Edit } from "lucide-react";
+import { CircleUser, Menu, Package2, Key, Mail, User, Edit, ShieldCheck } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 import { navItems } from "../App";
 
@@ -48,6 +48,10 @@ const Sidebar = () => (
               {item.title}
             </SidebarNavLink>
           ))}
+          <SidebarNavLink to="/kyc-aml/customer-identification">
+            <ShieldCheck className="h-4 w-4" />
+            KYC & AML
+          </SidebarNavLink>
         </nav>
       </div>
     </div>
@@ -76,6 +80,9 @@ const MobileSidebar = () => (
             {item.title}
           </SidebarNavLink>
         ))}
+        <SidebarNavLink to="/kyc-aml/customer-identification">
+          KYC & AML
+        </SidebarNavLink>
       </nav>
     </SheetContent>
   </Sheet>
