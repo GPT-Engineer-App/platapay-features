@@ -23,7 +23,6 @@ const ChangePassword = () => {
 
   const onSubmit = async (data) => {
     try {
-      // Handle password change logic
       await changePasswordAPI(data);
       toast.success("Password changed successfully");
     } catch (error) {
@@ -34,56 +33,56 @@ const ChangePassword = () => {
 
   return (
     <section className="py-12 bg-gray-100">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Change Password</h2>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-lg mx-auto space-y-6 bg-white p-6 rounded-lg shadow-md">
-          <FormField
-            control={form.control}
-            name="currentPassword"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Current Password</FormLabel>
-                <FormControl>
-                  <Input type="password" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="newPassword"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>New Password</FormLabel>
-                <FormControl>
-                  <Input type="password" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="confirmPassword"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Confirm Password</FormLabel>
-                <FormControl>
-                  <Input type="password" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button type="submit" variant="primary" className="w-full">
-            Change Password
-          </Button>
-        </form>
-      </Form>
-    </div>
-  </section>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Change Password</h2>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-lg mx-auto space-y-6 bg-white p-6 rounded-lg shadow-md">
+            <FormField
+              control={form.control}
+              name="currentPassword"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Current Password</FormLabel>
+                  <FormControl>
+                    <Input type="password" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="newPassword"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>New Password</FormLabel>
+                  <FormControl>
+                    <Input type="password" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="confirmPassword"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Confirm Password</FormLabel>
+                  <FormControl>
+                    <Input type="password" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button type="submit" variant="primary" className="w-full">
+              Change Password
+            </Button>
+          </form>
+        </Form>
+      </div>
+    </section>
   );
 };
 
