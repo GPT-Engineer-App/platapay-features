@@ -9,9 +9,36 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2, Key, Mail, User, Edit } from "lucide-react";
+import { CircleUser, Menu, Package2, Key, Mail, User, Edit, Home, Info, DollarSign, ShieldCheck } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
-import { navItems } from "../App";
+
+const navItems = [
+  {
+    title: "Home",
+    to: "/",
+    icon: <Home className="h-4 w-4" />,
+  },
+  {
+    title: "Features",
+    to: "/features",
+    icon: <Info className="h-4 w-4" />,
+  },
+  {
+    title: "Pricing",
+    to: "/pricing",
+    icon: <DollarSign className="h-4 w-4" />,
+  },
+  {
+    title: "Contact",
+    to: "/contact",
+    icon: <Mail className="h-4 w-4" />,
+  },
+  {
+    title: "IT Infrastructure",
+    to: "/it-infrastructure",
+    icon: <ShieldCheck className="h-4 w-4" />,
+  },
+];
 
 const Layout = () => {
   return (
@@ -73,6 +100,7 @@ const MobileSidebar = () => (
         </NavLink>
         {navItems.map((item) => (
           <SidebarNavLink key={item.to} to={item.to}>
+            {item.icon}
             {item.title}
           </SidebarNavLink>
         ))}
