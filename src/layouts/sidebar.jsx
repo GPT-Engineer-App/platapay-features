@@ -9,9 +9,31 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2, Key, Mail, User, Edit } from "lucide-react";
+import { CircleUser, Menu, Package2, Key, Mail, User, Edit, CheckSquare } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
-import { navItems } from "../App";
+
+const navItems = [
+  {
+    title: "Customer Management",
+    to: "/customer-care/customer-management",
+    icon: <User className="h-4 w-4" />,
+  },
+  {
+    title: "Online Ticketing",
+    to: "/customer-care/online-ticketing",
+    icon: <Mail className="h-4 w-4" />,
+  },
+  {
+    title: "Partner Training",
+    to: "/customer-care/partner-training",
+    icon: <Edit className="h-4 w-4" />,
+  },
+  {
+    title: "Feature Progress",
+    to: "/feature-progress",
+    icon: <CheckSquare className="h-4 w-4" />,
+  },
+];
 
 const Layout = () => {
   return (
@@ -42,18 +64,12 @@ const Sidebar = () => (
       </div>
       <div className="flex-1">
         <nav className="grid items-start px-2 text-sm font-medium lg:px-4 gap-2">
-          <SidebarNavLink to="/customer-care/customer-management">
-            <User className="h-4 w-4" />
-            Customer Management
-          </SidebarNavLink>
-          <SidebarNavLink to="/customer-care/online-ticketing">
-            <Mail className="h-4 w-4" />
-            Online Ticketing
-          </SidebarNavLink>
-          <SidebarNavLink to="/customer-care/partner-training">
-            <Edit className="h-4 w-4" />
-            Partner Training
-          </SidebarNavLink>
+          {navItems.map((item) => (
+            <SidebarNavLink key={item.to} to={item.to}>
+              {item.icon}
+              {item.title}
+            </SidebarNavLink>
+          ))}
         </nav>
       </div>
     </div>
@@ -77,15 +93,11 @@ const MobileSidebar = () => (
           <Package2 className="h-6 w-6" />
           <span className="sr-only">Acme Inc</span>
         </NavLink>
-        <SidebarNavLink to="/customer-care/customer-management">
-          Customer Management
-        </SidebarNavLink>
-        <SidebarNavLink to="/customer-care/online-ticketing">
-          Online Ticketing
-        </SidebarNavLink>
-        <SidebarNavLink to="/customer-care/partner-training">
-          Partner Training
-        </SidebarNavLink>
+        {navItems.map((item) => (
+          <SidebarNavLink key={item.to} to={item.to}>
+            {item.title}
+          </SidebarNavLink>
+        ))}
       </nav>
     </SheetContent>
   </Sheet>
