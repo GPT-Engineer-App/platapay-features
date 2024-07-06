@@ -113,15 +113,19 @@ const UserMenu = () => (
       <DropdownMenuSeparator />
       <DropdownMenuItem>
         <User className="h-4 w-4" />
-        Customer Management
+        Company Registration
       </DropdownMenuItem>
       <DropdownMenuItem>
         <Mail className="h-4 w-4" />
-        Online Ticketing
+        Branch Registration
       </DropdownMenuItem>
       <DropdownMenuItem>
         <Edit className="h-4 w-4" />
-        Partner Training
+        Tag Branches
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Key className="h-4 w-4" />
+        Assign Branch Managers
       </DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>

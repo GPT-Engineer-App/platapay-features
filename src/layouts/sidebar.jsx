@@ -42,17 +42,17 @@ const Sidebar = () => (
       </div>
       <div className="flex-1">
         <nav className="grid items-start px-2 text-sm font-medium lg:px-4 gap-2">
-          <SidebarNavLink to="/customer-care/customer-management">
-            <User className="h-4 w-4" />
-            Customer Management
+          <SidebarNavLink to="/partner-management/company-registration">
+            Company Registration
           </SidebarNavLink>
-          <SidebarNavLink to="/customer-care/online-ticketing">
-            <Mail className="h-4 w-4" />
-            Online Ticketing
+          <SidebarNavLink to="/partner-management/branch-registration">
+            Branch Registration
           </SidebarNavLink>
-          <SidebarNavLink to="/customer-care/partner-training">
-            <Edit className="h-4 w-4" />
-            Partner Training
+          <SidebarNavLink to="/partner-management/tag-branches">
+            Tag Branches
+          </SidebarNavLink>
+          <SidebarNavLink to="/partner-management/assign-branch-managers">
+            Assign Branch Managers
           </SidebarNavLink>
         </nav>
       </div>
@@ -77,14 +77,17 @@ const MobileSidebar = () => (
           <Package2 className="h-6 w-6" />
           <span className="sr-only">Acme Inc</span>
         </NavLink>
-        <SidebarNavLink to="/customer-care/customer-management">
-          Customer Management
+        <SidebarNavLink to="/partner-management/company-registration">
+          Company Registration
         </SidebarNavLink>
-        <SidebarNavLink to="/customer-care/online-ticketing">
-          Online Ticketing
+        <SidebarNavLink to="/partner-management/branch-registration">
+          Branch Registration
         </SidebarNavLink>
-        <SidebarNavLink to="/customer-care/partner-training">
-          Partner Training
+        <SidebarNavLink to="/partner-management/tag-branches">
+          Tag Branches
+        </SidebarNavLink>
+        <SidebarNavLink to="/partner-management/assign-branch-managers">
+          Assign Branch Managers
         </SidebarNavLink>
       </nav>
     </SheetContent>
