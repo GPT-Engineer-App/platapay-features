@@ -9,9 +9,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2, Key, Mail, User, Edit } from "lucide-react";
+import { CircleUser, Menu, Package2, Key, Mail, User, Edit, CheckSquare } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
-import { navItems } from "../App";
 
 const Layout = () => {
   return (
@@ -46,11 +45,10 @@ const DesktopNav = () => (
       <Package2 className="h-6 w-6" />
       <span className="sr-only">PlataPay</span>
     </NavItem>
-    {navItems.map((item) => (
-      <NavItem key={item.to} to={item.to}>
-        {item.title}
-      </NavItem>
-    ))}
+    <NavItem to="/feature-progress">
+      <CheckSquare className="h-4 w-4" />
+      Feature Progress
+    </NavItem>
   </nav>
 );
 
@@ -71,11 +69,10 @@ const MobileNav = () => (
           <Package2 className="h-6 w-6" />
           <span className="sr-only">PlataPay</span>
         </NavItem>
-        {navItems.map((item) => (
-          <NavItem key={item.to} to={item.to}>
-            {item.title}
-          </NavItem>
-        ))}
+        <NavItem to="/feature-progress">
+          <CheckSquare className="h-4 w-4" />
+          Feature Progress
+        </NavItem>
       </nav>
     </SheetContent>
   </Sheet>
