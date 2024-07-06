@@ -9,9 +9,36 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2, Key, Mail, User, Edit } from "lucide-react";
+import { CircleUser, Menu, Package2, Key, Mail, User, Edit, Home, Info, DollarSign, CheckSquare } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
-import { navItems } from "../App";
+
+const navItems = [
+  {
+    title: "Home",
+    to: "/",
+    icon: <Home className="h-4 w-4" />,
+  },
+  {
+    title: "Features",
+    to: "/features",
+    icon: <Info className="h-4 w-4" />,
+  },
+  {
+    title: "Pricing",
+    to: "/pricing",
+    icon: <DollarSign className="h-4 w-4" />,
+  },
+  {
+    title: "Contact",
+    to: "/contact",
+    icon: <Mail className="h-4 w-4" />,
+  },
+  {
+    title: "Feature Progress",
+    to: "/feature-progress",
+    icon: <CheckSquare className="h-4 w-4" />,
+  },
+];
 
 const Layout = () => {
   return (
@@ -48,6 +75,7 @@ const DesktopNav = () => (
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
+        {item.icon}
         {item.title}
       </NavItem>
     ))}
@@ -73,6 +101,7 @@ const MobileNav = () => (
         </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
+            {item.icon}
             {item.title}
           </NavItem>
         ))}
