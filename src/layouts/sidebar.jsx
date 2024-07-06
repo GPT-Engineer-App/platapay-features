@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2 } from "lucide-react";
+import { CircleUser, Menu, Package2, Key, Mail, User, Edit } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 import { navItems } from "../App";
 
@@ -96,6 +96,23 @@ const UserDropdown = () => (
       <DropdownMenuItem>Support</DropdownMenuItem>
       <DropdownMenuSeparator />
       <DropdownMenuItem>Logout</DropdownMenuItem>
+      <DropdownMenuSeparator />
+      <DropdownMenuItem>
+        <Key className="h-4 w-4" />
+        Change Password
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Mail className="h-4 w-4" />
+        Forgot Password
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <User className="h-4 w-4" />
+        View Account
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Edit className="h-4 w-4" />
+        Edit Profile
+      </DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
 );

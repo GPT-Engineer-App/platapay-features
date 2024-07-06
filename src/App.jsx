@@ -8,6 +8,11 @@ import Index from "./pages/Index.jsx";
 import Features from "./pages/Features.jsx";
 import Pricing from "./pages/Pricing.jsx";
 import Contact from "./pages/Contact.jsx";
+import ChangePassword from "./pages/AccountManagement/ChangePassword.jsx";
+import ForgotPassword from "./pages/AccountManagement/ForgotPassword.jsx";
+import ViewAccount from "./pages/AccountManagement/ViewAccount.jsx";
+import EditProfile from "./pages/AccountManagement/EditProfile.jsx";
+
 const queryClient = new QueryClient();
 
 export const navItems = [
@@ -45,6 +50,10 @@ const App = () => {
               <Route path="features" element={<Features />} />
               <Route path="pricing" element={<Pricing />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="account/change-password" element={<ChangePassword />} />
+              <Route path="account/forgot-password" element={<ForgotPassword />} />
+              <Route path="account/view-account" element={<ViewAccount />} />
+              <Route path="account/edit-profile" element={<EditProfile />} />
             </Route>
           </Routes>
         </Router>
