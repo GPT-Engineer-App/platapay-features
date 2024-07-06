@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Home, Info, DollarSign, Mail } from "lucide-react";
+import { Home, Info, DollarSign, Mail, Progress } from "lucide-react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./layouts/navbar";
 import Index from "./pages/Index.jsx";
@@ -39,6 +39,11 @@ export const navItems = [
     title: "Contact",
     to: "/contact",
     icon: <Mail className="h-4 w-4" />,
+  },
+  {
+    title: "Feature Progress",
+    to: "/feature-progress",
+    icon: <Progress className="h-4 w-4" />,
   },
 ];
 

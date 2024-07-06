@@ -46,7 +46,7 @@ const DesktopNav = () => (
       <Package2 className="h-6 w-6" />
       <span className="sr-only">PlataPay</span>
     </NavItem>
-    {navItems.concat({ title: "Feature Progress", to: "/feature-progress", icon: <Progress className="h-4 w-4" /> }).map((item) => (
+    {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
         {item.title}
       </NavItem>
@@ -71,7 +71,7 @@ const MobileNav = () => (
           <Package2 className="h-6 w-6" />
           <span className="sr-only">PlataPay</span>
         </NavItem>
-        {navItems.concat({ title: "Feature Progress", to: "/feature-progress", icon: <Progress className="h-4 w-4" /> }).map((item) => (
+        {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
             {item.title}
           </NavItem>
