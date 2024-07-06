@@ -15,10 +15,7 @@ import EditProfile from "./pages/AccountManagement/EditProfile.jsx";
 import CustomerManagement from "./pages/CustomerCare/CustomerManagement.jsx";
 import OnlineTicketing from "./pages/CustomerCare/OnlineTicketing.jsx";
 import PartnerTraining from "./pages/CustomerCare/PartnerTraining.jsx";
-import CompanyRegistration from "./pages/PartnerManagement/CompanyRegistration.jsx";
-import BranchRegistration from "./pages/PartnerManagement/BranchRegistration.jsx";
-import TagBranches from "./pages/PartnerManagement/TagBranches.jsx";
-import AssignBranchManagers from "./pages/PartnerManagement/AssignBranchManagers.jsx";
+
 
 const queryClient = new QueryClient();
 
