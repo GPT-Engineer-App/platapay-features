@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const fetchAccountDetails = async () => {
-  // Replace with actual API call for InterPay Outlet Portal
   try {
     const response = await fetch("/api/interpay/account-details");
     if (!response.ok) {
@@ -42,7 +41,6 @@ const ViewAccount = () => {
             <p><strong>Name:</strong> {data.name}</p>
             <p><strong>Email:</strong> {data.email}</p>
             <p><strong>Phone:</strong> {data.phone}</p>
-            {/* Add any additional fields specific to InterPay Outlet Portal */}
             <p><strong>Account ID:</strong> {data.accountId}</p>
             <p><strong>Registration Date:</strong> {data.registrationDate}</p>
           </CardContent>

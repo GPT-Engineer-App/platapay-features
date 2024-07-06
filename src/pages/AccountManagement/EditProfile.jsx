@@ -22,10 +22,10 @@ const EditProfile = () => {
     try {
       // Handle profile update logic specific to InterPay Outlet Portal here
       // Example: await updateProfile(data);
-      toast("Profile updated successfully");
+      toast.success("Profile updated successfully");
     } catch (error) {
       console.error("Profile update failed", error);
-      toast("Profile update failed. Please try again.");
+      toast.error("Profile update failed. Please try again.");
     }
   };
 

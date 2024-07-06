@@ -15,13 +15,12 @@ const ForgotPassword = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    // Handle forgot password logic for InterPay Outlet Portal
+  const onSubmit = async (data) => {
     try {
       // Simulate API call for password reset
       // Replace with actual API call
       console.log("Sending password reset link to:", data.email);
-      toast("Password reset link sent to your email for InterPay Outlet Portal");
+      toast.success("Password reset link sent to your email for InterPay Outlet Portal");
     } catch (error) {
       console.error("Error sending password reset link:", error);
       toast.error("Failed to send password reset link. Please try again.");
