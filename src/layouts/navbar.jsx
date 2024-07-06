@@ -123,6 +123,10 @@ const UserMenu = () => (
         <Edit className="h-4 w-4" />
         Partner Training
       </DropdownMenuItem>
+      <DropdownMenuItem>
+        <CheckSquare className="h-4 w-4" />
+        Feature Progress
+      </DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
 );
